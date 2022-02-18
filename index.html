@@ -9,7 +9,60 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <p>Hola</p>
+    <h1>Formulario Información Alta Telefónica</h1>
+    <form action="" name="telefonica"> 
+        <!-- Personal data -->
+       <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="30">
+        <br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" maxlength="60">
+        <br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" maxlength="60">
+        <br>
+
+        <label for="codigo-postal">Código Postal:</label>
+        <input type="text" id="codigo-postal" name="codigo-postal" pattern="[0-9]{5}">
+        <br>
+
+        <label for="localidad">Provincia:</label>
+        <input type="text" id="provincia" name="provincia"><br>
+    </fieldset>
+      <!-- end Personal data -->
+    <br>
+    <!-- Type of contract -->
+    <fieldset>
+        <legend>Tipo de contratación</legend>
+        <input type="radio" name="contratacion" value="nueva" checked="checked">Nueva contratación
+        <input type="radio" name="contratacion" value="portabilidad">Portabilidad
+        <input type="radio" name="contratacion" value="cambio">Cambio de contrato
+        <br>
+        <br>
+        <label for="actual">Elija la compañía actual</label>
+        <select name="actual">
+            <option value="movistar">Movistar</option>
+            <option value="orange">Orange</option>
+            <option value="vodafone">Vodafone</option>
+            <option value="yoigo">Yoigo</option>
+            <option value="ninguna">No tengo ninguna compañía</option>
+        </select>
+        <label for="nueva">En caso de portabilidad, elija la nueva compañía</label>
+        <select name="nueva">
+         <option value="movistar">Movistar</option>
+         <option value="orange">Orange</option>
+         <option value="vodafone">Vodafone</option>
+         <option value="yoigo">Yoigo</option>
+     </select>
+    </fieldset>
+     <!-- end Type of contract -->
+    <br>
+
+    </form>
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
