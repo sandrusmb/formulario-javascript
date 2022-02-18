@@ -13,83 +13,138 @@
     <form action="./procesarFormulario.php" name="telefonica"> 
         <!-- Personal data -->
        <fieldset>
-        <legend>Datos personales</legend>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" maxlength="30">
-        <br>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" maxlength="30">
+            <br>
 
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" id="apellidos" name="apellidos" maxlength="60">
-        <br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" maxlength="60">
+            <br>
 
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" maxlength="60">
-        <br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" maxlength="60">
+            <br>
 
-        <label for="codigo-postal">Código Postal:</label>
-        <input type="text" id="codigo-postal" name="codigo-postal" pattern="[0-9]{5}">
-        <br>
+            <label for="codigo-postal">Código Postal:</label>
+            <input type="text" id="codigo-postal" name="codigo-postal" pattern="[0-9]{5}">
+            <br>
 
-        <label id="localidad">Provincia:</label>
-        <input type="text" id="provincia" name="provincia"><br>
-    </fieldset>
+            <label id="localidad">Provincia:</label>
+            <input type="text" id="provincia" name="provincia"><br>
+        </fieldset>
       <!-- end Personal data -->
-    <br>
-    <!-- Type of contract -->
-    <fieldset>
-        <legend>Tipo de contratación</legend>
-        <input type="radio" name="contratacion" value="nueva" checked="checked">Nueva contratación
-        <input type="radio" name="contratacion" value="porta">Portabilidad
-        <input type="radio" name="contratacion" value="cambio">Cambio de contrato
         <br>
-        <br>
-        <label id="actual">Elija la compañía actual</label>
-        <select name="actual">
+        <!-- Type of contract -->
+        <fieldset>
+            <legend>Tipo de contratación</legend>
+            <input type="radio" name="contratacion" value="nueva" checked="checked">Nueva contratación
+            <input type="radio" name="contratacion" value="porta">Portabilidad
+            <input type="radio" name="contratacion" value="cambio">Cambio de contrato
+            <br>
+            <br>
+            <label id="actual">Elija la compañía actual</label>
+            <select name="actual">
+                <option value="movistar">Movistar</option>
+                <option value="orange">Orange</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="yoigo">Yoigo</option>
+                <option value="ninguna">No tengo ninguna compañía</option>
+            </select>
+            <label id="portabilidad">En caso de portabilidad, elija la nueva compañía</label>
+            <select name="portabilidad">
             <option value="movistar">Movistar</option>
             <option value="orange">Orange</option>
             <option value="vodafone">Vodafone</option>
             <option value="yoigo">Yoigo</option>
-            <option value="ninguna">No tengo ninguna compañía</option>
         </select>
-        <label id="portabilidad">En caso de portabilidad, elija la nueva compañía</label>
-        <select name="portabilidad">
-         <option value="movistar">Movistar</option>
-         <option value="orange">Orange</option>
-         <option value="vodafone">Vodafone</option>
-         <option value="yoigo">Yoigo</option>
-     </select>
-    </fieldset>
-     <!-- end Type of contract -->
-    <br>
-    <!-- Bank data -->
-    <fieldset>
-        <legend>Datos Bancarios</legend>
-        <label for="pais">País:</label>
-        <input type="text" value="ES" id="pais" name="pais" readonly="readonly">
-        <span>(sólo válido ES)</span>
+        </fieldset>
+        <!-- end Type of contract -->
         <br>
-        <label for="iban">Control IBAN:</label>
-        <input type="text" id="iban" name="iban" placeholder="XX" pattern="[0-9]{2}" maxlength="2">
-        <span>(dos dígitos)</span>
+        <!-- Bank data -->
+        <fieldset>
+            <legend>Datos Bancarios</legend>
+            <label for="pais">País:</label>
+            <input type="text" value="ES" id="pais" name="pais" readonly="readonly">
+            <span>(sólo válido ES)</span>
+            <br>
+            <label for="iban">Control IBAN:</label>
+            <input type="text" id="iban" name="iban" placeholder="XX" pattern="[0-9]{2}" maxlength="2">
+            <span>(dos dígitos)</span>
+            <br>
+            <label id="entidad">Entidad</label>
+            <input type="text" id="name" name="entidad" placeholder="XXXX" pattern="[0-9]" maxlength="4">
+            <span>(cuatro dígitos)</span>
+            <br>
+            <label for="sucursal">Sucursal:</label>
+            <input type="text" id="sucursal" name="sucursal" placeholder="XXXX" pattern="[0-9]" maxlength="4">
+            <span>(cuatro dígitos)</span>
+            <br>
+            <label for="dc">DC:</label>
+            <input type="text" id="dc" name="dc" placeholder="XX" pattern="[0-9]" maxlength="2">
+            <span>(dos dígitos)</span>
+            <br>
+            <label for="cuenta">Cuenta:</label>
+            <input type="text" id="cuenta" name="cuenta" placeholder="XXXXXXXXXX" pattern="[0-9]" maxlength="10">
+            <span>(diez dígitos)</span>
+        </fieldset>
+        <!-- end Bank sData -->
         <br>
-        <label id="entidad">Entidad</label>
-        <input type="text" id="name" name="entidad" placeholder="XXXX" pattern="[0-9]" maxlength="4">
-        <span>(cuatro dígitos)</span>
-        <br>
-        <label for="sucursal">Sucursal:</label>
-        <input type="text" id="sucursal" name="sucursal" placeholder="XXXX" pattern="[0-9]" maxlength="4">
-        <span>(cuatro dígitos)</span>
-        <br>
-        <label for="dc">DC:</label>
-        <input type="text" id="dc" name="dc" placeholder="XX" pattern="[0-9]" maxlength="2">
-        <span>(dos dígitos)</span>
-        <br>
-        <label for="cuenta">Cuenta:</label>
-        <input type="text" id="cuenta" name="cuenta" placeholder="XXXXXXXXXX" pattern="[0-9]" maxlength="10">
-        <span>(diez dígitos)</span>
-    </fieldset>
-<!-- end Back Data -->
+        <!-- Statistical Data -->
+        <fieldset>
+            <legend>Datos Estadísticos - ¿Cómo nos conoció?</legend>
+            <label for="data1">
+                <input
+                id="data1"
+                type="checkbox"
+                value="tv"
+                name="dataoptions"
+                />
+                A través de la TV
+            </label>
+            <br>
+            <label for="data2">
+                <input
+                id="data2"
+                type="checkbox"
+                value="radio"
+                name="dataoptions"
+                />
+                A través de la Radio
+            </label>
+            <br>
+            <label for="data3">
+                <input
+                id="data3"
+                type="checkbox"
+                value="internet"
+                name="dataoptions"
+                />
+                A través de Internet
+            </label>
+            <br>
+            <label for="data4">
+                <input
+                id="data4"
+                type="checkbox"
+                value="otros"
+                name="dataoptions"
+                />
+                Otros
+            </label>
+            <br>
+            <input type="range" id="valor" name="valor" min="1" max="5">
+            <label for="range">Valoración [1-5]</label>
+            <br>
+            <label for="date">Fecha de la encuesta</label>
+            <input type="date" name="fecha" value="2019-01-01"/>
+        </fieldset>
+        <!-- end Statistical Data -->
 
+        <!-- Buttons -->
+        <button type="submit">Enviar Datos</button>
+        <button type="reset">Borrar Datos</button>
+        <!-- end Buttons -->
     </form>
     <script src="main.js"></script>
 </body>
