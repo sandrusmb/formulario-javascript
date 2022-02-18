@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Formulario Información Alta Telefónica</h1>
-    <form action="" name="telefonica"> 
+    <form action="./procesarFormulario.php" name="telefonica"> 
         <!-- Personal data -->
        <fieldset>
         <legend>Datos personales</legend>
@@ -30,7 +30,7 @@
         <input type="text" id="codigo-postal" name="codigo-postal" pattern="[0-9]{5}">
         <br>
 
-        <label for="localidad">Provincia:</label>
+        <label id="localidad">Provincia:</label>
         <input type="text" id="provincia" name="provincia"><br>
     </fieldset>
       <!-- end Personal data -->
@@ -39,11 +39,11 @@
     <fieldset>
         <legend>Tipo de contratación</legend>
         <input type="radio" name="contratacion" value="nueva" checked="checked">Nueva contratación
-        <input type="radio" name="contratacion" value="portabilidad">Portabilidad
+        <input type="radio" name="contratacion" value="porta">Portabilidad
         <input type="radio" name="contratacion" value="cambio">Cambio de contrato
         <br>
         <br>
-        <label for="actual">Elija la compañía actual</label>
+        <label id="actual">Elija la compañía actual</label>
         <select name="actual">
             <option value="movistar">Movistar</option>
             <option value="orange">Orange</option>
@@ -51,8 +51,8 @@
             <option value="yoigo">Yoigo</option>
             <option value="ninguna">No tengo ninguna compañía</option>
         </select>
-        <label for="nueva">En caso de portabilidad, elija la nueva compañía</label>
-        <select name="nueva">
+        <label id="portabilidad">En caso de portabilidad, elija la nueva compañía</label>
+        <select name="portabilidad">
          <option value="movistar">Movistar</option>
          <option value="orange">Orange</option>
          <option value="vodafone">Vodafone</option>
@@ -61,8 +61,36 @@
     </fieldset>
      <!-- end Type of contract -->
     <br>
+    <!-- Bank data -->
+    <fieldset>
+        <legend>Datos Bancarios</legend>
+        <label for="pais">País:</label>
+        <input type="text" value="ES" id="pais" name="pais" readonly="readonly">
+        <span>(sólo válido ES)</span>
+        <br>
+        <label for="iban">Control IBAN:</label>
+        <input type="text" id="iban" name="iban" placeholder="XX" pattern="[0-9]{2}" maxlength="2">
+        <span>(dos dígitos)</span>
+        <br>
+        <label id="entidad">Entidad</label>
+        <input type="text" id="name" name="entidad" placeholder="XXXX" pattern="[0-9]" maxlength="4">
+        <span>(cuatro dígitos)</span>
+        <br>
+        <label for="sucursal">Sucursal:</label>
+        <input type="text" id="sucursal" name="sucursal" placeholder="XXXX" pattern="[0-9]" maxlength="4">
+        <span>(cuatro dígitos)</span>
+        <br>
+        <label for="dc">DC:</label>
+        <input type="text" id="dc" name="dc" placeholder="XX" pattern="[0-9]" maxlength="2">
+        <span>(dos dígitos)</span>
+        <br>
+        <label for="cuenta">Cuenta:</label>
+        <input type="text" id="cuenta" name="cuenta" placeholder="XXXXXXXXXX" pattern="[0-9]" maxlength="10">
+        <span>(diez dígitos)</span>
+    </fieldset>
+<!-- end Back Data -->
 
     </form>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
