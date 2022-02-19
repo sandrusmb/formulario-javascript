@@ -51,6 +51,7 @@
                 <option value="yoigo">Yoigo</option>
                 <option value="ninguna">No tengo ninguna compañía</option>
             </select>
+
             <label id="portabilidad">En caso de portabilidad, elija la nueva compañía</label>
             <select name="portabilidad">
             <option value="movistar">Movistar</option>
@@ -93,57 +94,33 @@
         <!-- Statistical Data -->
         <fieldset>
             <legend>Datos Estadísticos - ¿Cómo nos conoció?</legend>
-            <label for="data1">
-                <input
-                id="data1"
-                type="checkbox"
-                value="tv"
-                name="dataoptions"
-                />
-                A través de la TV
-            </label>
+            <input id="data1" type="checkbox" value="tv" name="dataoptions">
+            <label for="data1">A través de la TV</label>
             <br>
-            <label for="data2">
-                <input
-                id="data2"
-                type="checkbox"
-                value="radio"
-                name="dataoptions"
-                />
-                A través de la Radio
-            </label>
+            <input id="data2" type="checkbox" value="radio" name="dataoptions">
+            <label for="data2">A través de la Radio</label>
             <br>
-            <label for="data3">
-                <input
-                id="data3"
-                type="checkbox"
-                value="internet"
-                name="dataoptions"
-                />
-                A través de Internet
-            </label>
+            <input id="data3" type="checkbox" value="internet" name="dataoptions">
+            <label for="data3">A través de Internet</label>
             <br>
-            <label for="data4">
-                <input
-                id="data4"
-                type="checkbox"
-                value="otros"
-                name="dataoptions"
-                />
-                Otros
-            </label>
+            <input id="data4" type="checkbox" value="otros" name="dataoptions">
+            <label for="data4">Otros</label>
             <br>
-            <input type="range" id="valor" name="valor" min="1" max="5">
+            <input type="range" id="rating" name="valor" min="1" max="5">
             <label for="range">Valoración [1-5]</label>
             <br>
             <label for="date">Fecha de la encuesta</label>
-            <input type="date" name="fecha" value="2019-01-01"/>
+            <input type="date" name="fecha" id="date" value="2019-01-01"/>
         </fieldset>
         <!-- end Statistical Data -->
 
         <!-- Buttons -->
         <button type="submit">Enviar Datos</button>
         <button type="reset">Borrar Datos</button>
+        <br>
+        <button type="button" id="ratingBtn">Mostrar valoración</button>
+        <button type="button" id="accountBtn">Mostrar cuenta</button>
+        <button type="button" id="dayBtn">Mostrar día de la semana</button>
         <!-- end Buttons -->
     </form>
     <script src="main.js"></script>
