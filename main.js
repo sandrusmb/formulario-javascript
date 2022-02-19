@@ -35,7 +35,7 @@ function showDay(){
     let day = new Date(userDayValue);
     let dayNumber=day.getDay();
     let week =["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
-    alert(`El día de la semana es: ${week[dayNumber]}`);
+    alert(`La fecha seleccionada en el elemento de fecha es un ${week[dayNumber]}`);
 }
 
 buttonDay.addEventListener("click", showDay);
