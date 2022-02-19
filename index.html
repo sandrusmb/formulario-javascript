@@ -9,91 +9,102 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Formulario Información Alta Telefónica</h1>
+    <h1 class="title">Formulario Información Alta Telefónica</h1>
     <form action="./procesarFormulario.php" name="telefonica"> 
         <!-- Personal data -->
-       <fieldset>
-            <legend>Datos personales</legend>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" maxlength="30">
-            <br>
-
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" maxlength="60">
-            <br>
-
-            <label for="direccion">Dirección:</label>
-            <input type="text" id="direccion" name="direccion" maxlength="60">
-            <br>
-
-            <label for="codigo-postal">Código Postal:</label>
-            <input type="text" id="codigo-postal" name="codigo-postal" pattern="[0-9]{5}">
-            <br>
-
-            <label id="localidad">Provincia:</label>
-            <input type="text" id="provincia" name="provincia"><br>
+        <fieldset class="container">
+            <legend class="subtitle">Datos personales</legend>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" maxlength="5">
+            </div>
+            <div>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" maxlength="60">
+            </div>
+            <div>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" maxlength="60">
+            </div>
+            <div>
+                <label for="codigo">Código Postal:</label>
+                <input type="text" id="codigo" name="codigo" pattern="[0-9]{5}">
+            </div>
+            <div>
+                <label id="localidad">Provincia:</label>
+                <input type="text" id="provincia" name="provincia" pattern="[a-zA-Z]"><br>
+            </div>
         </fieldset>
-      <!-- end Personal data -->
-        <br>
+        <!-- end Personal data -->
+        
         <!-- Type of contract -->
-        <fieldset>
-            <legend>Tipo de contratación</legend>
-            <input type="radio" name="contratacion" value="nueva" checked="checked">Nueva contratación
-            <input type="radio" name="contratacion" value="porta">Portabilidad
-            <input type="radio" name="contratacion" value="cambio">Cambio de contrato
-            <br>
-            <br>
-            <label id="actual">Elija la compañía actual</label>
-            <select name="actual">
+        <fieldset class="container">
+            <legend class="subtitle">Tipo de contratación</legend>
+            <div class="radio">
+                <input type="radio" name="contratacion" value="nueva" checked="checked">Nueva contratación
+                <input type="radio" name="contratacion" value="porta">Portabilidad
+                <input type="radio" name="contratacion" value="cambio">Cambio de contrato
+            </div>
+            <div>
+                <label id="actual">Elija la compañía actual</label>
+                <select name="actual">
+                    <option value="movistar">Movistar</option>
+                    <option value="orange">Orange</option>
+                    <option value="vodafone">Vodafone</option>
+                    <option value="yoigo">Yoigo</option>
+                    <option value="ninguna">No tengo ninguna compañía</option>
+                </select>
+            
+                <label id="portabilidad">En caso de portabilidad, elija la nueva compañía</label>
+                <select name="portabilidad">
                 <option value="movistar">Movistar</option>
                 <option value="orange">Orange</option>
                 <option value="vodafone">Vodafone</option>
                 <option value="yoigo">Yoigo</option>
-                <option value="ninguna">No tengo ninguna compañía</option>
-            </select>
-
-            <label id="portabilidad">En caso de portabilidad, elija la nueva compañía</label>
-            <select name="portabilidad">
-            <option value="movistar">Movistar</option>
-            <option value="orange">Orange</option>
-            <option value="vodafone">Vodafone</option>
-            <option value="yoigo">Yoigo</option>
-        </select>
+                </select>
+            </div>
         </fieldset>
         <!-- end Type of contract -->
-        <br>
+        
         <!-- Bank data -->
-        <fieldset>
-            <legend>Datos Bancarios</legend>
-            <label for="pais">País:</label>
-            <input type="text" value="ES" id="pais" name="pais" readonly="readonly">
-            <span>(sólo válido ES)</span>
-            <br>
-            <label for="iban">Control IBAN:</label>
-            <input type="text" id="iban" name="iban" placeholder="XX" pattern="[0-9]{2}" maxlength="2">
-            <span>(dos dígitos)</span>
-            <br>
-            <label id="entidad">Entidad</label>
-            <input type="text" id="name" name="entidad" placeholder="XXXX" pattern="[0-9]" maxlength="4">
-            <span>(cuatro dígitos)</span>
-            <br>
-            <label for="sucursal">Sucursal:</label>
-            <input type="text" id="sucursal" name="sucursal" placeholder="XXXX" pattern="[0-9]" maxlength="4">
-            <span>(cuatro dígitos)</span>
-            <br>
-            <label for="dc">DC:</label>
-            <input type="text" id="dc" name="dc" placeholder="XX" pattern="[0-9]" maxlength="2">
-            <span>(dos dígitos)</span>
-            <br>
-            <label for="cuenta">Cuenta:</label>
-            <input type="text" id="cuenta" name="cuenta" placeholder="XXXXXXXXXX" pattern="[0-9]" maxlength="10">
-            <span>(diez dígitos)</span>
+        <fieldset class="container">
+            <legend class="subtitle">Datos Bancarios</legend>
+            <div>
+                <label for="pais">País:</label>
+                <input type="text" value="ES" id="pais" name="pais" readonly="readonly">
+                <span>(sólo válido ES)</span>
+            </div>
+            <div>
+                <label for="iban">Control IBAN:</label>
+                <input type="text" id="iban" name="iban" placeholder="XX" pattern="[0-9]{2}" maxlength="2">
+                <span>(dos dígitos)</span>
+            </div>
+            <div>
+                <label id="entidad">Entidad</label>
+                <input type="text" id="name" name="entidad" placeholder="XXXX" pattern="[0-9]" maxlength="4">
+                <span>(cuatro dígitos)</span>
+            </div>
+            <div>
+                <label for="sucursal">Sucursal:</label>
+                <input type="text" id="sucursal" name="sucursal" placeholder="XXXX" pattern="[0-9]" maxlength="4">
+                <span>(cuatro dígitos)</span>
+            </div>
+            <div>
+                <label for="dc">DC:</label>
+                <input type="text" id="dc" name="dc" placeholder="XX" pattern="[0-9]" maxlength="2">
+                <span>(dos dígitos)</span>
+            </div>
+            <div>
+                <label for="cuenta">Cuenta:</label>
+                <input type="text" id="cuenta" name="cuenta" placeholder="XXXXXXXXXX" pattern="[0-9]" maxlength="10">
+                <span>(diez dígitos)</span>
+            </div>
         </fieldset>
         <!-- end Bank sData -->
-        <br>
+        
         <!-- Statistical Data -->
-        <fieldset>
-            <legend>Datos Estadísticos - ¿Cómo nos conoció?</legend>
+        <fieldset class="container">
+            <legend class="subtitle">Datos Estadísticos - ¿Cómo nos conoció?</legend>
             <input id="data1" type="checkbox" value="tv" name="dataoptions">
             <label for="data1">A través de la TV</label>
             <br>
@@ -107,22 +118,24 @@
             <label for="data4">Otros</label>
             <br>
             <input type="range" id="rating" name="valor" min="1" max="5">
-            <label for="range">Valoración [1-5]</label>
+            <label id="range">Valoración [1-5]</label>
             <br>
             <label for="date">Fecha de la encuesta</label>
             <input type="date" name="fecha" id="date" value="2019-01-01"/>
         </fieldset>
         <!-- end Statistical Data -->
-
+        
         <!-- Buttons -->
-        <button type="submit">Enviar Datos</button>
-        <button type="reset">Borrar Datos</button>
-        <br>
-        <button type="button" id="ratingBtn">Mostrar valoración</button>
-        <button type="button" id="accountBtn">Mostrar cuenta</button>
-        <button type="button" id="dayBtn">Mostrar día de la semana</button>
+        <button type="submit" id="submit">Enviar Datos</button>
+        <button type="reset" id="reset">Borrar Datos</button>
+        <div>
+            <button type="button" id="ratingBtn">Mostrar Valoración</button>
+            <button type="button" id="accountBtn">Mostrar Cuenta</button>
+            <button type="button" id="dayBtn">Mostrar Día Semana</button>
+        </div>
         <!-- end Buttons -->
     </form>
     <script src="main.js"></script>
+    <script src="cp.js"></script>
 </body>
 </html>
