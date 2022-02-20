@@ -39,9 +39,7 @@ function readDigits(){
     const postalCodeArray=postalCode.value.split("");
     const twoDigitsArray=postalCodeArray.slice(0,2);
     const twoDigitsPostalCode=twoDigitsArray.join("");
-    console.log(twoDigitsPostalCode);
     const includesPostalCode=pcListArray.includes(twoDigitsPostalCode);
-    console.log(includesPostalCode);
     if(includesPostalCode===false){
         alert("Código Postal no válido")
     }
@@ -86,12 +84,10 @@ function readProvince(twoDigitsPostalCode){
     const pValueArray=province.value.split(" ");
     const pValue=pValueArray.join("");
     const finalPValue=pValue.toLowerCase();
-    console.log(finalPValue);
     const includesProvince=provinceListArray.includes(finalPValue);
     const cpData=twoDigitsPostalCode.path[2].childNodes[9].childNodes[3].value.split("").slice(0,2).join("");
     const mixValues=`${cpData}${finalPValue}`;
     const includesMixValue=mixListArray.includes(mixValues);
-    console.log(includesMixValue);
     if(includesProvince===true){
         if(includesMixValue===true){
             const divPostalCode = document.querySelector(".provincia");
