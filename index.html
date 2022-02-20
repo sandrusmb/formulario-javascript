@@ -31,7 +31,7 @@
                 <input type="text" id="codigo" name="codigo" pattern="[0-9]{5}" title="El campo Código Postal solo permite introducir números. Revisa que contenga 5 caracteres (ejem: 08004).">
             </div>
             <div class="provincia">
-                <label for="localidad" id="localidad">Provincia:</label>
+                <label for="provincia" id="localidad">Provincia:</label>
                 <input type="text" id="provincia" name="provincia">
             </div>
         </fieldset>
@@ -80,7 +80,7 @@
                 <span>(dos dígitos)</span>
             </div>
             <div>
-                <label for="entidad" id="entidad">Entidad</label>
+                <label for="name" id="entidad">Entidad</label>
                 <input type="text" id="name" name="entidad" placeholder="XXXX" pattern="[0-9]{4}" maxlength="4" title="El campo Entidad solo permite introducir números. Revisa que contenga 4 caracteres (ejem: 1234).">
                 <span>(cuatro dígitos)</span>
             </div>
@@ -106,24 +106,24 @@
         <fieldset class="container no-margin">
             <legend class="subtitle">Datos Estadísticos - ¿Cómo nos conoció?</legend>
             <div>
-                <input id="data1" type="checkbox" value="tv" name="dataoptions">
-                <label for="data1">A través de la TV</label>
+                <input id="tv" type="checkbox" value="tv" name="dataoptions">
+                <label for="tv">A través de la TV</label>
             </div>
             <div>
-                <input id="data2" type="checkbox" value="radio" name="dataoptions">
-                <label for="data2">A través de la Radio</label>
+                <input id="radio" type="checkbox" value="radio" name="dataoptions">
+                <label for="radio">A través de la Radio</label>
             </div>
             <div>
-                <input id="data3" type="checkbox" value="internet" name="dataoptions">
-                <label for="data3">A través de Internet</label>
+                <input id="internet" type="checkbox" value="internet" name="dataoptions">
+                <label for="internet">A través de Internet</label>
             </div>
             <div> 
-                <input id="data4" type="checkbox" value="otros" name="dataoptions">
-                <label for="data4">Otros</label>
+                <input id="otro" type="checkbox" value="otros" name="dataoptions">
+                <label for="otro">Otros</label>
             </div>
             <div class="margin-top">
                 <input type="range" id="rating" name="valor" min="1" max="5" value="1">
-                <label id="range">Valoración [1-5]</label>
+                <label for="rating" id="range">Valoración [1-5]</label>
             </div>
             <div class="margin-top">
                 <label for="date">Fecha de la encuesta</label>
