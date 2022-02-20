@@ -9,8 +9,6 @@ function characterNumber(){
     }else{
         if(postalCode.value.length<5 || postalCode.value.length>5){
             alert("Asegúrate de introducir 5 caracteres en tu Código Postal");
-        }else{
-            return false;
         }
     }
 }
@@ -24,7 +22,7 @@ function onlyNumbers(){
     const sentence = postalCode.value;
     regex = /[^0-9]/gi;
     result = sentence.match(regex);
-    if(result=="" || result==null){
+    if(result==="" || result===null){
         return false;
     }else{
         alert("El campo Código Postal solo admite números")
@@ -44,7 +42,7 @@ function readDigits(){
     console.log(twoDigitsPostalCode);
     const includesPostalCode=pcListArray.includes(twoDigitsPostalCode);
     console.log(includesPostalCode);
-    if(includesPostalCode==false){
+    if(includesPostalCode===false){
         alert("Código Postal no válido")
     }
 }
@@ -56,10 +54,8 @@ postalCode.addEventListener("focusout",readDigits);
 const province=document.getElementById("provincia");
 
 function emptyAlert(){
-    if(province.value==""){
+    if(province.value===""){
         alert("El campo Provincia no puede quedar vacío, por favor introduce información")
-    }else{
-        return false;
     }
 }
 
@@ -72,7 +68,7 @@ function onlyLetters(){
     const sentence = province.value;
     regex = /[^a-z\s]/gi;
     result = sentence.match(regex);
-    if(result=="" || result==null){
+    if(result==="" || result===null){
         return false;
     }else{
         alert("El campo Provincia solo admite letras. Por favor elimina números y/o caracteres especiales como tildes o eñes (ejem: Avila, La Coruna). Los espacios están permitidos (ejem: Islas Baleares).")
@@ -96,8 +92,8 @@ function readProvince(twoDigitsPostalCode){
     const mixValues=`${cpData}${finalPValue}`;
     const includesMixValue=mixListArray.includes(mixValues);
     console.log(includesMixValue);
-    if(includesProvince==true){
-        if(includesMixValue==true){
+    if(includesProvince===true){
+        if(includesMixValue===true){
             const divPostalCode = document.querySelector(".provincia");
             const newSpan = document.createElement("p");
             newSpan.classList.add("hasSuccess");
