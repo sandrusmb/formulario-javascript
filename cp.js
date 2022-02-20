@@ -88,8 +88,10 @@ let mixListArray=["01alava","02albacete","03alicante","04almeria","05avila","06b
 
 function readProvince(twoDigitsPostalCode){
     let pValueArray=province.value.split(" ");
-    let finalPValue=pValueArray.join("");
-    let includesProvince=provinceListArray.includes(finalPValue.toLowerCase());
+    let pValue=pValueArray.join("");
+    let finalPValue=pValue.toLowerCase();
+    console.log(finalPValue);
+    let includesProvince=provinceListArray.includes(finalPValue);
     let cpData=twoDigitsPostalCode.path[2].childNodes[9].childNodes[3].value.split("").slice(0,2).join("");
     let mixValues=`${cpData}${finalPValue}`;
     let includesMixValue=mixListArray.includes(mixValues);
